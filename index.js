@@ -1,35 +1,34 @@
 import express from 'express'
-import bancoDeDados from './repository/index.js'
 
-// server ou app
+
 const app = express()
 
-// metodo GET da funcao de subtrair usando QuerryParam
-//Com numero 1 e numerou ou num1 e num2
-app.listen(3000,() => {
-    console.log("Servidor ouvindo na porta 3000")
+app.get("/api/v1/somar", (req, res ) => {
+ const {num1, num2} = req.query
+ const resultado = Number(num1) + Number(num2)
+
+ res.status(200).send({ message: resultado})
 })
 
-app.get("/api/pessoa/:id", (req, res) => {
-    const id = req.params.id
+app.get("/api/v1/subtrair", (req, res ) => {
+ const {num1, num2} = req.query
+ const resultado = Number(num1) - Number(num2)
 
-   const pessoa = bancoDeDados.find(it => it.id == id)
-    if (!pessoa){
-       res.send({ message: "Pessoa nao encontrada" })
-   return  
-    }
-  res.send({ pessoa })
+ res.status(200).send({ message: resultado})
 })
 
-app.get("/api/pessoa", (req, res) => {
-  const { id, name } = req.query
+app.get("/api/v1/multiplicacao", (req, res ) => {
+ const {num1, num2} = req.query
+ const resultado = Number(num1) * Number(num2)
 
-  if(!id|| !name) {
-    res.send({ message: "Favor informar id e name" })
-    return
-  }
- bancoDeDados.push({ id, name})
- res.send({ message: "Pessoa criada com sucesso"})
+ res.status(200).send({ message: resultado})
+})
+
+app.get("/api/v1/divisao", (req, res ) => {
+ const {num1, num2} = req.query
+ const resultado = Number(num1) / Number(num2)
+
+ res.status(200).send({ message: resultado})
 })
 app.listen(3000,() => {
     console.log("Servidor ouvindo na porta 3000")
