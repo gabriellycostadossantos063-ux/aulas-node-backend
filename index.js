@@ -34,3 +34,7 @@ app.get("/api/pessoa", (req, res) => {
 app.listen(3000,() => {
     console.log("Servidor ouvindo na porta 3000")
 })
+
+app.post("/api/valor",(req, res) => {
+    const valor 
+})
