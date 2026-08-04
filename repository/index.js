@@ -1,3 +1,3 @@
-const bancoDeDados = []
+const cachorro = []
 
-export default bancoDeDados
+export default cachorro;
