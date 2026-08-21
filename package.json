@@ -1,7 +1,7 @@
 {
   "name": "aulas-node-backend",
-  "version": "0.0.1",
-  "description": "qualquer coisa",
+  "version": "1.0.0",
+  "description": "",
   "homepage": "https://github.com/gabriellycostadossantos063-ux/-aulas-node-backend#readme",
   "bugs": {
     "url": "https://github.com/gabriellycostadossantos063-ux/-aulas-node-backend/issues"
@@ -11,12 +11,12 @@
     "url": "git+https://github.com/gabriellycostadossantos063-ux/-aulas-node-backend.git"
   },
   "license": "ISC",
-  "author": "Gabrielly Costa Dos Santos",
+  "author": "Gabrielly",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "express": "^5.2.1"
